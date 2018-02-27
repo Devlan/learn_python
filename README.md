@@ -1,2 +1,1 @@
-# learn_python
-python练习
+#学习python用的
