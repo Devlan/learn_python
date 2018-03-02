@@ -10,9 +10,13 @@ def copy_file():
     n_file_name = t_file_name[:position] + '[附件]' + t_file_name[position:]
     n_file = open(n_file_name,'w')
     #4.读原文件
-    t_contect = t_file.read()
+    #read(),readline(),readlines()
+    while 1:
+        t_contect = t_file.read(1024)
+        if len(t_contect) == 0:
+            break
     #5.将读到的内容写入新文件
-    n_file.write(t_contect)
+        n_file.write(t_contect)
     #6.关闭两个文件
     n_file.close()
     t_file.close()
